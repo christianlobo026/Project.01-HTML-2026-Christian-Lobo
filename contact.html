@@ -4,42 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Christian Yohannes Lobo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: #0b101c;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .label {
+            font-weight: 200;
+            letter-spacing: 5px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0 0 50px 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #f8fafc;
+        }
+
+        .contact-card {
+            background: #161e2d;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .contact-item {
+            margin-bottom: 35px;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .info {
+            font-size: 1.05em;
+            font-weight: 300;
+            margin: 0;
+            color: #cbd5e1;
+        }
+
+        footer {
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 0.75em;
+        }
+
+        nav a.active {
+            color: #38bdf8;
+            font-weight: 600;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 6px;
+        }
+    </style>
 </head>
-<body style="margin: 0; font-family: 'Segoe UI', 'Helvetica Neue', sans-serif; background-color: #0b101c; color: white; min-height: 100vh; display: flex; flex-direction: column;">
+<body>
 
-    <main style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 60px 20px; text-align: center;">
-        <p style="font-weight: 200; letter-spacing: 5px; color: #38bdf8; margin-bottom: 10px; font-size: 0.8em; text-transform: uppercase; opacity: 0.8;">
-            Get In Touch
-        </p>
-
-        <h1 style="font-size: 3em; margin: 0 0 50px 0; font-weight: 700; letter-spacing: -1px; color: #f8fafc;">Contact Me</h1>
+    <main>
+        <p class="label">Get In Touch</p>
+        <h1>Contact Me</h1>
         
-        <div style="background: #161e2d; padding: 40px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); width: 100%; max-width: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-            
-            <div style="margin-bottom: 35px;">
-                <h3 style="color: #38bdf8; margin-bottom: 10px; font-size: 0.75em; letter-spacing: 2px; font-weight: 600; text-transform: uppercase;">Email</h3>
-                <p style="font-size: 1.05em; font-weight: 300; margin: 0; color: #cbd5e1;">christianlobo026@student.unsrat.ac.id</p>
+        <div class="contact-card">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p class="info">christianlobo026@student.unsrat.ac.id</p>
             </div>
 
-            <div style="margin-bottom: 35px;">
-                <h3 style="color: #38bdf8; margin-bottom: 10px; font-size: 0.75em; letter-spacing: 2px; font-weight: 600; text-transform: uppercase;">WhatsApp / Phone</h3>
-                <p style="font-size: 1.05em; font-weight: 300; margin: 0; color: #cbd5e1;">+62 812 2919 3943</p>
+            <div class="contact-item">
+                <h3>WhatsApp / Phone</h3>
+                <p class="info">+62 812 2919 3943</p>
             </div>
 
-            <div style="margin: 0;">
-                <h3 style="color: #38bdf8; margin-bottom: 10px; font-size: 0.75em; letter-spacing: 2px; font-weight: 600; text-transform: uppercase;">Location</h3>
-                <p style="font-size: 1.05em; font-weight: 300; margin: 0; color: #cbd5e1;">Manado, Indonesia</p>
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p class="info">Manado, Indonesia</p>
             </div>
-
         </div>
     </main>
 
-    <footer style="padding-bottom: 60px; text-align: center;">
-        <nav style="display: flex; justify-content: center; gap: 40px;">
-            <a href="index.html" style="text-decoration: none; color: #64748b; font-weight: 400; letter-spacing: 2px; font-size: 0.75em;">HOME</a>
-            <a href="gallery.html" style="text-decoration: none; color: #64748b; font-weight: 400; letter-spacing: 2px; font-size: 0.75em;">GALLERY</a>
-            <a href="blog.html" style="text-decoration: none; color: #64748b; font-weight: 400; letter-spacing: 2px; font-size: 0.75em;">BLOG</a>
-            <a href="contact.html" style="text-decoration: none; color: #38bdf8; font-weight: 600; letter-spacing: 2px; font-size: 0.75em; border-bottom: 2px solid #38bdf8; padding-bottom: 6px;">CONTACT</a>
+    <footer>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="blog.html">BLOG</a>
+            <a href="contact.html" class="active">CONTACT</a>
         </nav>
     </footer>
 

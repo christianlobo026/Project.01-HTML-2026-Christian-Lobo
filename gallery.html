@@ -4,59 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Christian Yohannes Lobo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: #0b101c;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            padding: 80px 20px;
+        }
+
+        .category-label {
+            font-weight: 200;
+            letter-spacing: 5px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0 0 50px 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #f8fafc;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        figure {
+            margin: 0;
+            max-width: 320px;
+            text-align: left;
+            background: #161e2d;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        figure:hover {
+            transform: translateY(-5px);
+        }
+
+        figure img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            filter: contrast(110%);
+        }
+
+        figcaption strong {
+            display: block;
+            color: #38bdf8;
+            font-size: 1.1em;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        figcaption p {
+            margin: 0;
+            font-size: 0.85em;
+            color: #cbd5e1;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        footer {
+            padding-bottom: 60px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 0.75em;
+        }
+
+        nav a.active {
+            color: #38bdf8;
+            font-weight: 600;
+            border-bottom: 2px solid #38bdf8;
+            padding-bottom: 6px;
+        }
+    </style>
 </head>
-<body style="margin: 0; font-family: 'Segoe UI', 'Helvetica Neue', sans-serif; background-color: #0b101c; color: white; min-height: 100vh; display: flex; flex-direction: column; text-align: center;">
+<body>
 
-    <main style="flex: 1; padding: 80px 20px;">
-        <p style="font-weight: 200; letter-spacing: 5px; color: #38bdf8; margin-bottom: 10px; font-size: 0.8em; text-transform: uppercase; opacity: 0.8;">
-            Visual Journey
-        </p>
+    <main>
+        <p class="category-label">Visual Journey</p>
         
-        <h1 style="font-size: 3em; margin: 0 0 50px 0; font-weight: 700; letter-spacing: -1px; color: #f8fafc;">
-            Gallery
-        </h1>
+        <h1>Gallery</h1>
         
-        <section style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1200px; margin: 0 auto;">
+        <section class="gallery-container">
             
-            <figure style="margin: 0; max-width: 320px; text-align: left; background: #161e2d; padding: 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                <img src="images/foto1.jpg" alt="Gunung Empung" style="width: 100%; border-radius: 4px; margin-bottom: 15px; filter: contrast(110%);">
+            <figure>
+                <img src="images/foto1.jpg" alt="Mt Empung">
                 <figcaption>
-                    <strong style="display: block; color: #38bdf8; font-size: 1.1em; letter-spacing: 0.5px; margin-bottom: 5px;">Mt Empung</strong>
-                    <p style="margin: 0; font-size: 0.85em; color: #cbd5e1; font-weight: 300; line-height: 1.5;">
-                        Pemandangan dari Gunung Empung di Sulawesi Utara. Tempat di mana udara segar dan hamparan hijau yang luas menyatu dalam harmoni alam yang menenangkan.
-                    </p>
+                    <strong>Mt Empung</strong>
+                    <p>Pemandangan dari Gunung Empung di Sulawesi Utara. Tempat di mana udara segar dan hamparan hijau yang luas menyatu dalam harmoni alam yang menenangkan.</p>
                 </figcaption>
             </figure>
 
-            <figure style="margin: 0; max-width: 320px; text-align: left; background: #161e2d; padding: 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                <img src="images/foto2.jpg" alt="Pulau Sara" style="width: 100%; border-radius: 4px; margin-bottom: 15px; filter: contrast(110%);">
+            <figure>
+                <img src="images/foto2.jpg" alt="Pulau Sara">
                 <figcaption>
-                    <strong style="display: block; color: #38bdf8; font-size: 1.1em; letter-spacing: 0.5px; margin-bottom: 5px;">Pulau Sara</strong>
-                    <p style="margin: 0; font-size: 0.85em; color: #cbd5e1; font-weight: 300; line-height: 1.5;">
-                        Menikmati jernihnya air laut di Pulau Sara, Kepulauan Talaud. Pasir putih yang bersih menjadikannya salah satu ikon kebanggaan di ujung utara Nusantara.
-                    </p>
+                    <strong>Pulau Sara</strong>
+                    <p>Menikmati jernihnya air laut di Pulau Sara, Kepulauan Talaud. Pasir putih yang bersih menjadikannya salah satu ikon kebanggaan di ujung utara Nusantara.</p>
                 </figcaption>
             </figure>
 
-            <figure style="margin: 0; max-width: 320px; text-align: left; background: #161e2d; padding: 15px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
-                <img src="images/foto3.jpg" alt="Dermaga PLTU" style="width: 100%; border-radius: 4px; margin-bottom: 15px; filter: contrast(110%);">
+            <figure>
+                <img src="images/foto3.jpg" alt="Dermaga PLTU">
                 <figcaption>
-                    <strong style="display: block; color: #38bdf8; font-size: 1.1em; letter-spacing: 0.5px; margin-bottom: 5px;">Dermaga PLTU</strong>
-                    <p style="margin: 0; font-size: 0.85em; color: #cbd5e1; font-weight: 300; line-height: 1.5;">
-                        Sisi lain keindahan Kepulauan Talaud di Dermaga PLTU. Garis pantai yang tenang berpadu dengan struktur dermaga yang estetik saat matahari mulai terbenam.
-                    </p>
+                    <strong>Dermaga PLTU</strong>
+                    <p>Sisi lain keindahan Kepulauan Talaud di Dermaga PLTU. Garis pantai yang tenang berpadu dengan struktur dermaga yang estetik saat matahari mulai terbenam.</p>
                 </figcaption>
             </figure>
 
         </section>
     </main>
 
-    <footer style="padding-bottom: 60px;">
-        <nav style="display: flex; justify-content: center; gap: 40px;">
-            <a href="index.html" style="text-decoration: none; color: #64748b; font-weight: 400; letter-spacing: 2px; font-size: 0.75em;">HOME</a>
-            <a href="gallery.html" style="text-decoration: none; color: #38bdf8; font-weight: 600; letter-spacing: 2px; font-size: 0.75em; border-bottom: 2px solid #38bdf8; padding-bottom: 6px;">GALLERY</a>
-            <a href="blog.html" style="text-decoration: none; color: #64748b; font-weight: 400; letter-spacing: 2px; font-size: 0.75em;">BLOG</a>
-            <a href="contact.html" style="text-decoration: none; color: #64748b; font-weight: 400; letter-spacing: 2px; font-size: 0.75em;">CONTACT</a>
+    <footer>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="gallery.html" class="active">GALLERY</a>
+            <a href="blog.html">BLOG</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
     </footer>
 
